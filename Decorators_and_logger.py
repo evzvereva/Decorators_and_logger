@@ -25,7 +25,7 @@ def parametrized_decor(parameter):
 
 @parametrized_decor(parameter='logger.log')
 def data_hashing(path):
-    with open('countries.json', encoding='utf-8') as f:
+    with open(path, encoding='utf-8') as f:
         file_json = json.load(f)
         for dictionary in file_json:
             countries = dictionary['name']['common']
